@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Devprofile Microsoft Authentication API Integration</title>
+  </head>
+  <body>
+    <% if (!user) { %>
+    <h2>Welcome! Please log in.</h2>
+    <p>
+      <a href="/">Home</a> |
+      <a href="/login">Log In</a>
+    </p>
+    <% } else { %>
+    <h2>Hello, <%= user.displayName %>.</h2>
+    <p>
+      <a href="/">Home</a> | <a href="/account">Account</a> |
+      <a href="/logout">Log Out</a>
+    </p>
+    <% } %> <%- body %>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devprofile Microsoft Authentication API Integration</title>
+  </head>
+  <body>
+    <% if (!user) { %>
+    <h2>Welcome! Please log in.</h2>
+    <h3><%= message %></h3>
+    <p><a href="/">Home</a> | <a href="/account">Account</a></p>
+    <div>
+      <a href="/auth/google/login">Login With Google</a> |
+      <a href="/auth/github/login">Login With Github</a> |
+      <a href="/auth/bitbucket/login">Login With Bitbucket</a>
+    </div>
+    <% } else { %>
+    <h2>Hello, <%= user.displayName %>.</h2>
+    <p>
+      <a href="/">Home</a> | <a href="/account">Account</a> |
+      <a href="/logout">Log Out</a>
+    </p>
+    <% } %> Made with ♥ by Devprofile
+  </body>
+</html>
